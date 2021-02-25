@@ -1,0 +1,74 @@
+@each $color, $value in $theme-colors {
+    $shadow-color: shift-color($value, $alert-bg-scale);
+    .my-border-left-#{$color} {
+        border-left-width: .25rem;
+        border-left-color: $shadow-color;
+    }
+}
+
+@each $color, $value in $theme-colors {
+    $border-color: shift-color($value, $alert-bg-scale);
+    .my-border-left-#{$color}:hover {
+        border-left-width: .25rem;
+        border-left-color: $value;
+        box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+    }
+}
+
+@each $color, $value in $theme-colors {
+    $shadow-color: shift-color($value, $alert-bg-scale);
+    .my-border-bottom-#{$color} {
+        border-bottom-width: .25rem;
+        border-bottom-color: $shadow-color;
+    }
+}
+
+@each $color, $value in $theme-colors {
+    $border-color: shift-color($value, $alert-bg-scale);
+    .my-border-bottom-#{$color}:hover {
+        border-bottom-width: .25rem;
+        border-bottom-color: $value;
+        box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+    }
+}
+
+/* sticky top */
+.sticky-offset {
+    top: 140px;
+    z-index: 1;
+}
+
+/*
+
+ */
+.event-active-navbar {
+    font-weight: bold;
+}
+
+/* Main banner bg desktop*/
+.main-banner-bg-desktop {
+    background-image: url("../images/bg/main_banner_bg_desktop_1.jpg");
+
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* Main banner bg mobile */
+.main-banner-bg-mobile {
+    background-image: url("../images/bg/main_banner_bg_mobile.jpg");
+
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Main banner bg events */
+.main-banner-bg-events {
+    background-image: url("../images/bg/main_banner_bg_events.jpg");
+
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
