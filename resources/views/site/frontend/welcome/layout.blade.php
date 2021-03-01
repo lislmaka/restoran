@@ -5,13 +5,11 @@
     @if ($userAgent->isDesktop())
         <div class="d-none d-md-block">
             @includeIf('site.frontend.welcome.desktop.main-banner')
-            @includeIf('site.frontend.welcome.desktop.discount')
+            @includeIf('site.frontend.welcome.desktop.covid19')
             @includeIf('site.frontend.welcome.desktop.benefits')
-            @includeIf('site.frontend.welcome.desktop.popular-countries')
-            @includeIf('site.frontend.welcome.desktop.popular-cities')
-            @includeIf('site.frontend.welcome.desktop.popular-categories')
-            @includeIf('site.frontend.welcome.desktop.reviews')
-            @includeIf('site.frontend.welcome.desktop.map')
+            @includeIf('site.frontend.welcome.desktop.action')
+
+            @includeIf('site.frontend.welcome.desktop.activities')
         </div>
     @endif
     {{-- End Desktop --}}
@@ -22,10 +20,6 @@
             @includeIf('site.frontend.welcome.mobile.main-banner')
             @includeIf('site.frontend.welcome.mobile.discount')
             @includeIf('site.frontend.welcome.mobile.benefits')
-            @includeIf('site.frontend.welcome.mobile.popular-countries')
-            @includeIf('site.frontend.welcome.mobile.popular-cities')
-            @includeIf('site.frontend.welcome.mobile.popular-categories')
-{{--            @includeIf('site.frontend.welcome.mobile.reviews')--}}
         </div>
     @endif
     {{-- End Mobile --}}

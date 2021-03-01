@@ -26,9 +26,14 @@
 
 <body>
 <div id="app">
+
+    @section('navbar-fix')
+        @includeIf('site.def.desktop.navbar-fix')
+    @show
+
     <div class="shadow-sm sticky-top">
-        @section('navbar')
-            @includeIf('site.def.desktop.navbar')
+        @section('navbar-float')
+            @includeIf('site.def.desktop.navbar-float')
         @show
     </div>
 
