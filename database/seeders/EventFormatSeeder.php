@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\EventFormat;
+use Faker\Generator as Faker;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Str;
 
@@ -13,7 +14,7 @@ class EventFormatSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+    public function run(Faker $faker)
     {
         $eventFormats = array(
             'Банкет',
@@ -28,6 +29,7 @@ class EventFormatSeeder extends Seeder
 
             $inst->name = $eventFormat;
             $inst->slug = Str::slug($eventFormat);
+            $inst->description = $faker->realText(300);
 
             $inst->save();
         }

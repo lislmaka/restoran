@@ -11,7 +11,11 @@
             </div>
 
             <div class="col-md-3 py-3 d-flex align-items-center justify-content-center">
-                @include('site.components.desktop.button',['btn_1_title' => 'Бесплатный расчет', 'btn_1_url' => '', 'btn_style' => 'btn-light'])
+{{--                @include('site.components.desktop.button',['btn_1_title' => 'Бесплатный расчет', 'btn_1_url' => '', 'btn_style' => 'btn-light'])--}}
+                <a class="btn btn-lg btn-light" href="#" role="button" data-bs-toggle="modal" data-bs-target="#requestModal">
+                    &#129395;
+                    @lang('Бесплатный расчет меню')
+                </a>
             </div>
 
         </div>

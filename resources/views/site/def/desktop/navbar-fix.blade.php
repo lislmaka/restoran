@@ -14,7 +14,9 @@
                 <span class="badge bg-transparent text-muted me-3">{{ config('site.site_email') }}</span>
             </div>
 
-            <a class="btn btn-primary" href="#" role="button">@lang('Бесплатный расчет меню')</a>
+            <a class="btn btn-primary" href="#" role="button" data-bs-toggle="modal" data-bs-target="#requestModal">
+                @lang('Бесплатный расчет меню')
+            </a>
         </div>
         <div class="col-1 d-flex justify-content-end align-items-center">
             @guest
