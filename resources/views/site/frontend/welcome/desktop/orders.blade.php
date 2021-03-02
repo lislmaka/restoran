@@ -1,4 +1,4 @@
-@component('site.components.desktop.bock-header',['header' => 'Мероприятия, которые мы обсуживаем'])
+@component('site.components.desktop.bock-header',['header' => 'Мероприятия, которые мы обслуживали'])
     <div class="mt-3 text-muted">
         @lang('')
     </div>

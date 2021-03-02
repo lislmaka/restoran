@@ -9,7 +9,7 @@
             @includeIf('site.frontend.welcome.desktop.benefits')
             @includeIf('site.frontend.welcome.desktop.action')
 
-            @includeIf('site.frontend.welcome.desktop.activities')
+            @includeIf('site.frontend.welcome.desktop.orders')
         </div>
     @endif
     {{-- End Desktop --}}

@@ -10,7 +10,10 @@ class WelcomeController extends Controller
     //
     public function index(Request $request)
     {
-        $view_data = [];
+        $view_data = [
+            'title' => 'Кейтеринг, банкеты и фуршеты',
+            'description' => 'Кейтеринг в Москве и области от действующего ресторана. Качественная еда на ваше мероприятие'
+        ];
 
         return view('site.frontend.welcome.layout', $view_data);
     }
