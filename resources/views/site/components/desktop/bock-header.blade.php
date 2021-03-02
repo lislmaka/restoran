@@ -5,6 +5,13 @@
         <div class="my-5">
             <h2 class="h2 fw-bold">
                 @lang($header)
+
+                <div wire:loading>
+                    <div class="spinner-grow text-primary" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+
             </h2>
 
             {{$slot}}
