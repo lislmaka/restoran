@@ -40,7 +40,7 @@
     @yield('content')
 
     @if ($userAgent->isDesktop())
-{{--        @includeIf('site.def.desktop.footer')--}}
+        @includeIf('site.def.desktop.footer')
         @includeIf('site.def.desktop.company')
         @includeIf('site.def.desktop.modals.modal_request')
     @endif

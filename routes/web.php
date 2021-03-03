@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Frontend\PageController;
 use App\Http\Controllers\Frontend\WelcomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -21,3 +22,11 @@ Route::get('/dashboard', function () {
 require __DIR__.'/auth.php';
 
 Route::get('/', [WelcomeController::class, 'index'])->name('welcome');
+
+// Pages routes
+Route::get('/{page_category}/{page_info?}', [PageController::class, 'index'])->name('pages.index');
+
+// 404
+Route::fallback(function () {
+    abort(404);
+});
