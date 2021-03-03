@@ -1,9 +1,9 @@
 <div class="container-fluid bg-dark mt-5">
-    <div class="container-xxl py-3 g-0">
+    <div class="container-xxl py-3">
         <div class="row">
 
             @for ($columnNumber = 1; $columnNumber <= 3; $columnNumber++)
-                <div class="col-md-4 g-0">
+                <div class="col-md-4">
                     @foreach($footerPageCategories as $pageCategory)
                         @if($pageCategory->column != $columnNumber)
                             @continue
