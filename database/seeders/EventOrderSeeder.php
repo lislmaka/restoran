@@ -23,7 +23,7 @@ class EventOrderSeeder extends Seeder
         $eventTypes = EventType::where('active', true)->count();
         $eventStyles = EventStyle::where('active', true)->count();
 
-        $countOfOrders = 1000;
+        $countOfOrders = config('site.count_of_orders', 100);
 
         while ($countOfOrders--) {
             $inst = new EventOrder();
@@ -31,6 +31,7 @@ class EventOrderSeeder extends Seeder
             $inst->format_id = rand(1, $eventFormats);
             $inst->type_id = rand(1, $eventTypes);
             $inst->style_id = rand(1, $eventStyles);
+            $inst->img = rand(1, 20).'.jpg';
 
             $inst->save();
         }

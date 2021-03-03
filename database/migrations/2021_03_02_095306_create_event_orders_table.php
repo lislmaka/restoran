@@ -18,6 +18,7 @@ class CreateEventOrdersTable extends Migration
             $table->bigInteger('format_id')->unsigned();
             $table->bigInteger('type_id')->unsigned();
             $table->bigInteger('style_id')->unsigned();
+            $table->string('img');
             $table->timestamps();
 
             $table->foreign('format_id')->references('id')->on('event_formats')->onDelete('cascade');

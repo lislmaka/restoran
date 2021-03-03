@@ -1,7 +1,7 @@
 <div>
     @component('site.components.desktop.bock-header',['header' => 'Мероприятия, которые мы обслуживали'])
         <div class="mt-3 text-muted">
-            @lang('')
+            @lang('Посмотрите проекты которые мы выполнили. Вы также можете посмотреть меню этих проектов - возможно что-то можете взять за основу')
         </div>
     @endcomponent
 
@@ -24,10 +24,14 @@
             </button>
         @endforeach
 
-        <div class="card mt-3">
-            <div class="card-body">
-                This is some text within a card body. {{ $selectedTypeId }}
-            </div>
+        <div wire:loading>
+            <button class="btn btn-light" type="button">
+                <span class="spinner-grow spinner-grow-sm text-primary" role="status" aria-hidden="true"></span>
+            </button>
+        </div>
+
+        <div class="row row-cols-md-4 g-3 mt-3">
+            @include('site.components.desktop.bock-events-vertically', ['events' => $events])
         </div>
 
     </div>
