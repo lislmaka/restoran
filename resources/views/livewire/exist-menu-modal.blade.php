@@ -16,7 +16,11 @@
     <div class="modal-body">
         @if($eventId)
             <div class="row">
-                <div class="col-8"></div>
+                <div class="col-8">
+                    <div class="alert alert-warning" role="alert">
+                        Вы можете заказать данное меню как есть либо взять его за основу для своего нового меню. Просто скопируйте меню и отредактируйте меню согласно ваших пожеланий. Вы также можете обратиться в службу поддержки и наши сотрудники помогут вам составить правильное меню. Это быстро и бесплатно!
+                    </div>
+                </div>
                 <div class="col-4">
                     <div class="card">
                         <div class="card-header lead fw-bold">
@@ -26,9 +30,6 @@
                                     <span class="spinner-grow spinner-grow-sm text-primary" role="status" aria-hidden="true"></span>
                                 </button>
                             </div>
-                        </div>
-                        <div class="card-body text-muted">
-                            Вы можете заказать данное меню как есть либо взять его за основу своего меню
                         </div>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item d-flex justify-content-between align-items-center">
@@ -89,6 +90,7 @@
         @endif
     </div>
     <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">@lang('Скопировать меню')</button>
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">@lang('Закрыть')</button>
     </div>
 </div>
