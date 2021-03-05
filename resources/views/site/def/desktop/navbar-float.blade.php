@@ -15,13 +15,21 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
-                {{-- Begin --}}
-                <li class="nav-item fw-normal">
-                    <a class="nav-link" href="#" title="@lang('Блюда')">
-                        @lang('Блюда')
-                    </a>
-                </li>
-                {{-- End --}}
+                {{-- Begin dishes --}}
+                @if( Route::current()->getName() == 'dishes.index' )
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold active" href="{{ route('dishes.index') }}" title="@lang('Блюда')">
+                            @lang('Блюда')
+                        </a>
+                    </li>
+                @else
+                    <li class="nav-item fw-normal">
+                        <a class="nav-link" href="{{ route('dishes.index') }}" title="@lang('Блюда')">
+                            @lang('Блюда')
+                        </a>
+                    </li>
+                @endif
+                {{-- End dishes --}}
 
                 {{-- Begin --}}
                 <li class="nav-item fw-normal">

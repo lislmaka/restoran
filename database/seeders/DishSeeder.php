@@ -31,6 +31,7 @@ class DishSeeder extends Seeder
             $inst->name = $name;
             $inst->slug = Str::slug($name);
             $inst->description = $faker->realText(300);
+            $inst->img = rand(1, 10).'.jpg';
             $inst->price = rand(1000, 10000);
             $inst->weight = rand(100, 1000);
             $inst->min_quantity = $quantity > 50 ? 1 : 10;

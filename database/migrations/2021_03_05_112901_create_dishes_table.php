@@ -19,6 +19,7 @@ class CreateDishesTable extends Migration
             $table->string('name');
             $table->string('slug');
             $table->text('description');
+            $table->string('img');
             $table->integer('price');
             $table->integer('weight');
             $table->integer('min_quantity');
