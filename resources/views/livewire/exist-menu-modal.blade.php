@@ -18,7 +18,10 @@
             <div class="row">
                 <div class="col-8">
                     <div class="alert alert-warning" role="alert">
-                        Вы можете заказать данное меню как есть либо взять его за основу для своего нового меню. Просто скопируйте меню и отредактируйте меню согласно ваших пожеланий. Вы также можете обратиться в службу поддержки и наши сотрудники помогут вам составить правильное меню. Это быстро и бесплатно!
+                        Вы можете заказать данное меню как есть либо взять его за основу для своего нового меню. Скопируйте меню и отредактируйте согласно ваших пожеланий
+                    </div>
+                    <div class="alert alert-warning" role="alert">
+                        Вы можете обратиться в службу поддержки и наши сотрудники помогут вам составить правильное меню согласно ваших пожеланий. Это быстро и бесплатно!
                     </div>
                 </div>
                 <div class="col-4">
@@ -67,14 +70,7 @@
                                 </div>
                                 <span class="badge bg-primary rounded-pill">{{ number_format(floor(rand(100, 10000) / $event->persons), 0, '', '.') }}</span>
                             </li>
-{{--                            <li class="list-group-item d-flex justify-content-between align-items-center">--}}
-{{--                                <div>--}}
-{{--                                    @lang('Еды на человека в формате')--}}
-{{--                                    <span class="badge bg-light text-dark rounded-pill">{{ $event->format->name }}</span>--}}
-{{--                                    @lang('рекомендуется (грамм)')--}}
-{{--                                </div>--}}
-{{--                                <span class="badge bg-primary rounded-pill">{{ number_format(rand(100, 10000), 0, '', '.') }}</span>--}}
-{{--                            </li>--}}
+
                             <li class="list-group-item list-group-item-primary d-flex justify-content-between align-items-center">
                                 <div class="fw-bold">
                                     @lang('Итоговая стоимость')
@@ -91,6 +87,7 @@
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-primary" data-bs-dismiss="modal">@lang('Скопировать меню')</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">@lang('Скачать меню в формате Excel')</button>
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">@lang('Закрыть')</button>
     </div>
 </div>
