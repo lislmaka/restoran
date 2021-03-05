@@ -18,6 +18,8 @@ class CreateEventOrdersTable extends Migration
             $table->bigInteger('format_id')->unsigned();
             $table->bigInteger('type_id')->unsigned();
             $table->bigInteger('style_id')->unsigned();
+            $table->integer('price');
+            $table->integer('persons');
             $table->string('img');
             $table->timestamps();
 

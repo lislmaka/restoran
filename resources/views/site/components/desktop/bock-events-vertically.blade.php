@@ -11,15 +11,15 @@
             <div class="card-img-overlay">
                 <div class="position-absolute top-0 start-0 p-3">
                     <span class="badge bg-light text-dark rounded-pill">
-                        <a href="#" class="text-decoration-none text-dark">
-                            {{ $event->type->name }}
-                        </a>
+                        {{ $event->type->name }}
                     </span>
                     <br>
                     <span class="badge bg-light text-dark rounded-pill">
-                        <a href="#" class="text-decoration-none text-dark">
-                            {{ $event->format->name }}
-                        </a>
+                        {{ $event->format->name }}
+                    </span>
+                    <br>
+                    <span class="badge bg-light text-dark rounded-pill">
+                        {{ $event->style->name }}
                     </span>
                 </div>
             </div>
@@ -27,14 +27,14 @@
                 <li class="list-group-item d-flex justify-content-between align-items-center">
                     @lang('Цена')
                     <span class="badge bg-primary rounded-pill">
-                        {{ number_format(rand(100000, 1000000), 0, '', '.') }}
+                        {{ number_format($event->price, 0, '', '.') }}
                         <i class="fas fa-ruble-sign"></i>
                     </span>
                 </li>
                 <li class="list-group-item d-flex justify-content-between align-items-center">
                     @lang('Кол-во человек')
                     <span class="badge bg-primary rounded-pill">
-                        {{ number_format(rand(10, 100), 0, '', '.') }}
+                        {{ number_format($event->persons, 0, '', '.') }}
                         <i class="fas fa-ruble-sign"></i>
                     </span>
                 </li>

@@ -17,9 +17,9 @@ class EventStyleSeeder extends Seeder
     public function run(Faker $faker)
     {
         $eventStyles = array(
-            'Хотим хорошо поесть',
+            'Хорошо поесть',
             'Легкие закуски',
-            'Все по высшему разряду',
+            'Хотим подешевле',
         );
         foreach ($eventStyles as $eventStyle) {
             $inst = new EventStyle();

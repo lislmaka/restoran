@@ -4,7 +4,7 @@
             @lang('Заявка на составление меню')
             <span class="badge bg-danger rounded-pill">@lang('бесплатно')</span>
             <div wire:loading>
-                <span class="badge bg-light text-muted ms-3 rounded-pill">
+                <span class="badge bg-warning text-dark ms-3 rounded-pill">
                     <span class="spinner-grow spinner-grow-sm text-primary" role="status" aria-hidden="true"></span>
                     @lang('Идет обновление...')
                 </span>

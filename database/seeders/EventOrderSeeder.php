@@ -32,6 +32,8 @@ class EventOrderSeeder extends Seeder
             $inst->type_id = rand(1, $eventTypes);
             $inst->style_id = rand(1, $eventStyles);
             $inst->img = rand(1, 20).'.jpg';
+            $inst->price = rand(1000, 1000000);
+            $inst->persons = rand(10, 200);
 
             $inst->save();
         }

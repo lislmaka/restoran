@@ -2,14 +2,7 @@
     <div class="modal-header bg-secondary text-white">
         <div class="modal-title lead fw-bold" id="existMenuModalLabel">
             @if($eventId)
-                @lang('Тип')
-                <span class="badge bg-light text-muted rounded-pill">{{ $event->type->name }}</span>
-                , @lang('формат')
-                <span class="badge bg-light text-muted rounded-pill">{{ $event->format->name }}</span>
-                , @lang('кол-во человек')
-                <span class="badge bg-light text-muted rounded-pill">{{ number_format(rand(10, 100), 0, '', '.') }}</span>
-                , @lang('цена')
-                <span class="badge bg-light text-muted rounded-pill">{{ number_format(rand(10000, 100000), 0, '', '.') }}</span>
+                @lang('Готовое меню')
             @endif
             <div wire:loading>
                 <span class="badge bg-warning text-dark ms-3 rounded-pill">
@@ -21,7 +14,81 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
     </div>
     <div class="modal-body">
-        ddd
+        @if($eventId)
+            <div class="row">
+                <div class="col-8"></div>
+                <div class="col-4">
+                    <div class="card">
+                        <div class="card-header lead fw-bold">
+                            @lang('Информация по меню')
+                            <div wire:loading>
+                                <button class="btn btn-sm btn-light" type="button">
+                                    <span class="spinner-grow spinner-grow-sm text-primary" role="status" aria-hidden="true"></span>
+                                    <span class="spinner-grow spinner-grow-sm text-primary" role="status" aria-hidden="true"></span>
+                                    <span class="spinner-grow spinner-grow-sm text-primary" role="status" aria-hidden="true"></span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body text-muted">
+                            Вы можете заказать данное меню как есть либо взять его за основу своего меню
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                @lang('Тип')
+                                <span class="badge bg-primary rounded-pill">{{ $event->type->name }}</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                @lang('Формат')
+                                <span class="badge bg-primary rounded-pill">{{ $event->format->name }}</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                @lang('Стиль')
+                                <span class="badge bg-primary rounded-pill">{{ $event->style->name }}</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                @lang('Кол-во человек')
+                                <span
+                                    class="badge bg-primary rounded-pill">{{ number_format($event->persons, 0, '', '.') }}</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                @lang('Блюд в меню (шт.)')
+                                <span class="badge bg-primary rounded-pill">{{ number_format(rand(10, 100), 0, '', '.') }}</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                @lang('Вес блюд по меню (грамм)')
+                                <span class="badge bg-primary rounded-pill">{{ number_format(rand(100, 10000), 0, '', '.') }}</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                @lang('Цена на 1-го чел. (руб.)')
+                                <span class="badge bg-primary rounded-pill">{{ number_format(floor($event->price / $event->persons), 0, '', '.') }}</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <div>
+                                    @lang('Еды на 1-го чел. (грамм)')
+                                </div>
+                                <span class="badge bg-primary rounded-pill">{{ number_format(floor(rand(100, 10000) / $event->persons), 0, '', '.') }}</span>
+                            </li>
+{{--                            <li class="list-group-item d-flex justify-content-between align-items-center">--}}
+{{--                                <div>--}}
+{{--                                    @lang('Еды на человека в формате')--}}
+{{--                                    <span class="badge bg-light text-dark rounded-pill">{{ $event->format->name }}</span>--}}
+{{--                                    @lang('рекомендуется (грамм)')--}}
+{{--                                </div>--}}
+{{--                                <span class="badge bg-primary rounded-pill">{{ number_format(rand(100, 10000), 0, '', '.') }}</span>--}}
+{{--                            </li>--}}
+                            <li class="list-group-item list-group-item-primary d-flex justify-content-between align-items-center">
+                                <div class="fw-bold">
+                                    @lang('Итоговая стоимость')
+                                </div>
+                                <span
+                                    class="badge bg-primary rounded-pill">{{ number_format($event->price, 0, '', '.') }}</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        @else
+        @endif
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">@lang('Закрыть')</button>
