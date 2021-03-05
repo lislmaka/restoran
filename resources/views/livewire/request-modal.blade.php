@@ -1,6 +1,6 @@
 <div class="modal-content">
     <div class="modal-header bg-secondary text-white">
-        <div class="modal-title lead fw-bold" id="helpModalLabel">
+        <div class="modal-title lead fw-bold" id="requestModalLabel">
             @lang('Заявка на составление меню')
             <span class="badge bg-danger rounded-pill">@lang('бесплатно')</span>
             <div wire:loading>

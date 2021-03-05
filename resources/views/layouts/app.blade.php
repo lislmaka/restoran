@@ -43,6 +43,7 @@
         @includeIf('site.def.desktop.footer')
         @includeIf('site.def.desktop.company')
         @includeIf('site.def.desktop.modals.modal_request')
+        @includeIf('site.def.desktop.modals.modal-exist-menu')
     @endif
 
     @if ($userAgent->isMobile())

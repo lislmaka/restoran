@@ -13,6 +13,11 @@ class MainPageOrders extends Component
     public $selectedTypeId = null;
     public $events = [];
 
+    public function sendParamsToExistMenuModal($eventId)
+    {
+        $this->emit('getParamsToExistMenuModal', $eventId);
+    }
+
     public function selectEventType($typeId)
     {
         $this->selectedTypeId = $typeId;

@@ -2,18 +2,22 @@
 
     <div class="col">
         <div class="card h-100 shadow-sm my-border-bottom-info">
-            <img src="{{ asset('images/demo/demo1/'.$event->img) }}" class="card-img-top" alt="...">
+            <a href="#" class="stretched-link" data-bs-toggle="modal"
+               data-bs-target="#existMenuModal"
+               wire:click="sendParamsToExistMenuModal({{ $event->id }})">
+                <img src="{{ asset('images/demo/demo1/'.$event->img) }}" class="card-img-top" alt="...">
+            </a>
 
             <div class="card-img-overlay">
                 <div class="position-absolute top-0 start-0 p-3">
-                    <span class="badge bg-light text-muted">
-                        <a href="#" class="text-decoration-none text-muted">
+                    <span class="badge bg-light text-dark rounded-pill">
+                        <a href="#" class="text-decoration-none text-dark">
                             {{ $event->type->name }}
                         </a>
                     </span>
                     <br>
-                    <span class="badge bg-light text-muted">
-                        <a href="#" class="text-decoration-none text-muted">
+                    <span class="badge bg-light text-dark rounded-pill">
+                        <a href="#" class="text-decoration-none text-dark">
                             {{ $event->format->name }}
                         </a>
                     </span>
@@ -30,7 +34,7 @@
                 <li class="list-group-item d-flex justify-content-between align-items-center">
                     @lang('Кол-во человек')
                     <span class="badge bg-primary rounded-pill">
-                        {{ number_format(rand(1, 10000), 0, '', '.') }}
+                        {{ number_format(rand(10, 100), 0, '', '.') }}
                         <i class="fas fa-ruble-sign"></i>
                     </span>
                 </li>
