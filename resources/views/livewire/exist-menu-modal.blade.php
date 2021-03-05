@@ -24,8 +24,6 @@
                             <div wire:loading>
                                 <button class="btn btn-sm btn-light" type="button">
                                     <span class="spinner-grow spinner-grow-sm text-primary" role="status" aria-hidden="true"></span>
-                                    <span class="spinner-grow spinner-grow-sm text-primary" role="status" aria-hidden="true"></span>
-                                    <span class="spinner-grow spinner-grow-sm text-primary" role="status" aria-hidden="true"></span>
                                 </button>
                             </div>
                         </div>
