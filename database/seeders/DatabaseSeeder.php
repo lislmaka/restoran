@@ -23,5 +23,6 @@ class DatabaseSeeder extends Seeder
         $this->call(PageCategorySeeder::class);
         $this->call(PageSeeder::class);
         $this->call(DishCategorySeeder::class);
+        $this->call(DishSeeder::class);
     }
 }
